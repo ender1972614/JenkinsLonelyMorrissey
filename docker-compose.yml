@@ -1,0 +1,10 @@
+services:
+  app1:
+    build: ./myapp
+    ports:
+      - "8000:8000"
+
+  app2:
+    build: ./myapp2
+    ports:
+      - "9000:8000"
