@@ -4,6 +4,7 @@ WORKDIR /src
 COPY main.cpp . 
 RUN g++ -O2 -static -o hello main.cpp 
 # Stage 2: εκτέλεση 
-FROM alpine:3.20 
+#FROM alpine:3.20 
+FROM scratch
 COPY --from=builder /src/hello /usr/local/bin/hello 
 CMD ["hello"] 
